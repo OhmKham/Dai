@@ -126,6 +126,12 @@ body {
     }
 }
 
+@media(max-width: 400px){
+    .lovegif{
+        width: 30%;
+    }
+}
+
 a{
     text-decoration: none;
     color: black;
