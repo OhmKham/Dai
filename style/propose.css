@@ -5,6 +5,8 @@ body {
     user-select: none;
 }
 
+
+
 .hide{
     display: none;
 }
@@ -116,4 +118,15 @@ body {
     left: calc(50% - 1rem);
     transform: all .5s ease;
     z-index: 2;
+}
+
+@media(max-width: 800px){
+    .lovegif{
+        width: 50%;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
