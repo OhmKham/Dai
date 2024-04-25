@@ -15,106 +15,19 @@
     <div class="container" id="container">
 
 
-        <h2 id="text1"></h2>
-
-        <img src="img/erm-finger.gif" alt="please">
-
-        <div class="btn_con hide">
-            <button class="btn btn-yes">
-                <a href="ask.html">ၽွမ်ႉ</a>
-            </button>
-            <button class="btn btn-no">ပႆႇၽွမ်ႉ</button>
-        </div>
+        <h2 id="text1">
+            သင်ဝႃႈၼွင်ႉၽွမ်ႉတႃတေတူၺ်း 
+            <br>
+            ဢၼ်မႂ်ႇမၼ်းၼႆၸိုင် 
+            <br>
+            မွၵ်ႉလၢတ်ႈႁႆႈပီႈႁူႉ ဢိတ်ႉၼိုင်ႈၼႃႈ
+            <br>
+            ပီႈတေႁၢင်ႈႁႅၼ်းဝႆႉပၼ်
+        </h2>
 
 
     </div>
 
-    <script>
-        const container = document.getElementById("container");
-        const btnNo = document.querySelector(".btn-no");
-
-        function getRandomNumber(min, max) {
-            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-            return randomNumber;
-        }
-
-        btnNo.addEventListener("touchstart", (e) => {
-            const containerHeight = container.getBoundingClientRect().height;
-            const containerWidth = container.getBoundingClientRect().width;
-            const btnHeight = btnNo.getBoundingClientRect().height;
-            const btnWidth = btnNo.getBoundingClientRect().width;
-            const btnTop = btnNo.getBoundingClientRect().top;
-            const btnLeft = btnNo.getBoundingClientRect().left;
-
-            let newTop = btnTop;
-            let newLeft = btnLeft;
-
-            while (Math.abs(newTop - btnTop) < containerHeight / 3) {
-                newTop = getRandomNumber(0, containerHeight - btnHeight)
-            }
-
-            while (Math.abs(newLeft - btnLeft) < containerWidth / 3) {
-                newLeft = getRandomNumber(0, containerWidth - btnWidth)
-            }
-
-            btnNo.style.top = Math.floor(newTop) + "px";
-
-            btnNo.style.left = Math.floor(newLeft) + "px";
-        })
-
-        btnNo.addEventListener("mouseover", (e) => {
-                const containerHeight = container.getBoundingClientRect().height;
-                const containerWidth = container.getBoundingClientRect().width;
-                const btnHeight = btnNo.getBoundingClientRect().height;
-                const btnWidth = btnNo.getBoundingClientRect().width;
-                const btnTop = btnNo.getBoundingClientRect().top;
-                const btnLeft = btnNo.getBoundingClientRect().left;
-
-                let newTop = btnTop;
-                let newLeft = btnLeft;
-
-                while (Math.abs(newTop - btnTop) < containerHeight / 3) {
-                    newTop = getRandomNumber(0, containerHeight - btnHeight)
-                }
-
-                while (Math.abs(newLeft - btnLeft) < containerWidth / 3) {
-                    newLeft = getRandomNumber(0, containerWidth - btnWidth)
-                }
-
-                btnNo.style.top = Math.floor(newTop) + "px";
-
-                btnNo.style.left = Math.floor(newLeft) + "px";
-            })
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <script>
-
-        var i = 0;
-        var txt1 = "Hi SweetHeart.....!  <<              I want to say something special to you.<<<                So , Please read everything carefully...!                                                                           > When I saw you for the first time < You seems something Special to me.  <<                  As the days goes < you get closer to me....! <<                           I don't know the reason why your thoughts always resonates inside my mind...!                                                     > Everything about you is always intresting for me...!                     << I am somewhat nervous Because I haven't said these words to anyone and I won't say to anyone in future...!                                                     > I Love my Parents so much than anything else in this world....!                    << Now You are the only person  whom I love equally with my parents....!                                                             >I Love U <SweetHeart.....! |                  <<<< Give me One chance to Prove my Love ...!  >ပီႈၸႂ်ႁိပ်ႈၸႂ်ဝႆးၼႃႇတေႉၵေႃႈဢမ်ႇၸႂ်ႈ  <<<ၵူၺ်းၵႃႈပီႈဢမ်ႇၶႂ်ႈပဵၼ်ၵူၼ်းတူၵ်းလိူၼ်းပွၵ်ႈသွင်ယဝ်ႉ                >ၸွင်ႈၼွင်ႉတေပႃႈၽွမ်ႉ   <<<လွင်ႈဢၼ်ပီႈတေ <ၶႂ်ႈယွၼ်းပဵၼ်ၵေႃႉပႆႁိမ်းၶၢင်ႈၼွင်ႉၵႂႃႇ";
-        var speed = 75;
-        typeWriter();
-        function typeWriter() {
-            if (i < txt1.length) {
-                if (txt1.charAt(i) == '<')
-                    document.getElementById("text1").innerHTML += '</br>'
-                else if (txt1.charAt(i) == '>')
-                    document.getElementById("text1").innerHTML = ''
-                else
-                    document.getElementById("text1").innerHTML += txt1.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-
-        function redirectToNewPage() {
-            $(".btn_con").removeClass("hide");
-        }
-        var totalTextAnimationTime = txt1.length * 77;
-
-        setTimeout(redirectToNewPage, totalTextAnimationTime);
-    </script>
 </body>
 
 </html>
